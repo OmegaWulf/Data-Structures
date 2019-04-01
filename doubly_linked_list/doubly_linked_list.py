@@ -45,23 +45,39 @@ class DoublyLinkedList:
 
     def add_to_head(self, value):
         newNode = ListNode(value)
-        newNode.next = self.head
-        self.head.prev = newNode
-        self.head = newNode
+
+        if self.head is None:
+            self.head = newNode
+            self.tail = newNode
+        else:
+            newNode.next = self.head
+            self.head.prev = newNode
+            self.head = newNode
 
 
     def remove_from_head(self):
-        self.head = self.head.next
+        if not self.head:
+            return None
+        if self.head == self.tail:
+            self.head = None
+            self.tail = None
+        else:
+            self.head = self.head.next
 
 
     def add_to_tail(self, value):
         newNode = ListNode(value)
-        self.tail.next = newNode
-        newNode.prev = self.tail
-        self.tail = newNode
+        if self.head is None:
+            self.head = newNode
+            self.tail = newNode
+        else:
+            self.tail.next = newNode
+            newNode.prev = self.tail
+            self.tail = newNode
 
     def remove_from_tail(self):
-        self.tail = self.tail.prev
+        if self.tail is not None:
+            self.tail = self.tail.prev
 
     def move_to_front(self, node):
         node.prev.next = node.next
@@ -93,3 +109,17 @@ class DoublyLinkedList:
             currentNode = currentNode.next
 
         return count
+
+
+newList = DoublyLinkedList()
+node1 = ListNode(0)
+node2 = ListNode(1)
+node3 = ListNode(2)
+node4 = ListNode(3)
+
+newList.add_to_head(node1)
+newList.add_to_head(node2)
+
+newList.remove_from_head()
+
+newList.add_to_tail(node3)
