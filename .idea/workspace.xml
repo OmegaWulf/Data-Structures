@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdeaa4af-a93d-4969-a6fb-584c1cc1c9d2" name="Default Changelist" comment="" />
+    <list default="true" id="cdeaa4af-a93d-4969-a6fb-584c1cc1c9d2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/doubly_linked_list/doubly_linked_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/doubly_linked_list/doubly_linked_list.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +25,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/doubly_linked_list/doubly_linked_list.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="63" column="34" lean-forward="true" selection-start-line="63" selection-start-column="34" selection-end-line="63" selection-end-column="34" />
+            <state relative-caret-position="520">
+              <caret line="92" column="42" selection-start-line="92" selection-start-column="42" selection-end-line="92" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -101,12 +103,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1554148664958</updated>
-      <workItem from="1554148668520" duration="1463000" />
+      <workItem from="1554148668520" duration="1791000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1463000" />
+    <option name="totallyTimeSpent" value="1791000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="9" y="35" width="1260" height="737" extended-state="0" />
@@ -149,8 +151,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/doubly_linked_list/doubly_linked_list.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="63" column="34" lean-forward="true" selection-start-line="63" selection-start-column="34" selection-end-line="63" selection-end-column="34" />
+        <state relative-caret-position="520">
+          <caret line="92" column="42" selection-start-line="92" selection-start-column="42" selection-end-line="92" selection-end-column="42" />
         </state>
       </provider>
     </entry>

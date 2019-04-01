@@ -83,4 +83,13 @@ class DoublyLinkedList:
         node.next.prev = node.prev
 
     def get_max(self):
-        
+        if self.head is None:
+            return 0
+        count = 1
+        currentNode = self.head
+
+        while currentNode.next is not None:
+            count += 1
+            currentNode = currentNode.next
+
+        return count
