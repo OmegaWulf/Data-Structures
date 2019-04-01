@@ -72,7 +72,11 @@ class DoublyLinkedList:
 
 
     def move_to_end(self, node):
-        pass
+        node.prev.next = node.next
+        node.next.prev = node.prev
+        node.next = None
+        node.prev = self.tail
+        self.tail = node
 
     def delete(self, node):
         pass
