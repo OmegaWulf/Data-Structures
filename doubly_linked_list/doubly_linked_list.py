@@ -6,6 +6,9 @@ class ListNode:
         self.prev = prev
         self.next = next
 
+    def __repr__(self):
+        return str(self.value)
+
     """Wrap the given value in a ListNode and insert it
     after this node. Note that this node could already
     have a next node it is point to."""
@@ -114,14 +117,17 @@ class DoublyLinkedList:
 
 
 newList = DoublyLinkedList()
-node1 = ListNode(0)
-node2 = ListNode(1)
-node3 = ListNode(2)
-node4 = ListNode(3)
+node0 = ListNode(0)
+node1 = ListNode(1)
+node2 = ListNode(2)
+node3 = ListNode(3)
 
-newList.add_to_head(node1)
-newList.add_to_head(node2)
 
-newList.remove_from_head()
-
+newList.add_to_tail(node0)
+newList.add_to_tail(node1)
+newList.add_to_tail(node2)
 newList.add_to_tail(node3)
+
+print(node0.value)
+
+newList.move_to_front(node2)
