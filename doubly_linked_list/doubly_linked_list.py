@@ -117,17 +117,23 @@ class DoublyLinkedList:
 
 
 newList = DoublyLinkedList()
-node0 = ListNode(0)
-node1 = ListNode(1)
-node2 = ListNode(2)
-node3 = ListNode(3)
 
+newList.add_to_tail(0)
+newList.add_to_tail(1)
+newList.add_to_tail(2)
+newList.add_to_tail(3)
 
-newList.add_to_tail(node0)
-newList.add_to_tail(node1)
-newList.add_to_tail(node2)
-newList.add_to_tail(node3)
+print(newList.head)
+print(newList.head.next)
+print(newList.head.next.next)
+print(newList.head.next.next.next)
 
-print(node0.value)
+middle = newList.head.next.next
 
-newList.move_to_front(node2)
+print(f'\n')
+
+newList.delete(middle)
+print(newList.head)
+print(newList.head.next)
+print(newList.head.next.next)
+print(newList.head.next.next.next)
