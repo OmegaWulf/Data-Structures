@@ -5,8 +5,6 @@ class BinarySearchTree:
         self.right = None
 
     def insert(self, value):
-        newNode = BinarySearchTree(value)
-
         if self.value:
             if value < self.value:
                 if self.left is None:
@@ -36,8 +34,24 @@ class BinarySearchTree:
                 return self.right.contains(target)
 
     def get_max(self):
-        while self.right is not None:
-            
+
+        if self.right is None:
+            return self.value
+
+        rightNode = self.right
+        while rightNode.right is not None:
+            rightNode = rightNode.right
+        return rightNode.value
 
     def for_each(self, cb):
         pass
+
+
+
+tree = BinarySearchTree(10)
+tree.insert(10)
+tree.insert(5)
+tree.insert(15)
+tree.insert(12)
+
+print(tree.get_max())
