@@ -44,7 +44,14 @@ class BinarySearchTree:
         return rightNode.value
 
     def for_each(self, cb):
-        pass
+
+        if self is not None:
+            # perform cb
+            if self.left is not None:
+                self.for_each(self.left, cb)
+            if self.right is not None:
+                self.for_each(self.right, cb)
+
 
 
 
