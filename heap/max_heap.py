@@ -29,7 +29,7 @@ class Heap:
         else:
             firstNode = self.storage.pop(0)
             lastNode = self.storage.pop(len(self.storage)-1)
-            self.storage[0] = lastNode
+            self.storage.insert(0, lastNode)
             self._sift_down(0)
             return firstNode
 
@@ -53,7 +53,31 @@ class Heap:
 
 
     def _sift_down(self, index):
-        pass
+        node = self.storage[index]
+        nodeIndex = self.storage.index(node)
+
+        left = (nodeIndex * 2) + 1
+        right = (nodeIndex * 2) + 2
+        childMax = max(self.storage[left].value, self.storage[right].value)
+        greaterChild = self.findGreaterChild(left, right)
+
+
+        while node.value < childMax:
+            # node is less than one of it's children, swap
+            self.storage[nodeIndex], self.storage[greaterChild] = self.storage[greaterChild], self.storage[nodeIndex]
+            node = self.storage[greaterChild]
+            nodeIndex = greaterChild
+            left = greaterChild * 2 + 1
+            right = greaterChild * 2 + 2
+
+            childMax = max(self.storage[left].value, self.storage[right].value)
+            greaterChild = self.findGreaterChild(left, right)
+
+    def findGreaterChild(self, left, right):
+        greater = right
+        if self.storage[left].value > self.storage[right].value:
+            greater = left
+        return greater
 
 
 heap = Heap()
@@ -61,7 +85,13 @@ heap.insert(10)
 heap.insert(3)
 heap.insert(5)
 heap.insert(7)
-heap.insert(122)
+heap.insert(12)
+heap.insert(155)
+heap.insert(2)
+heap.insert(19)
 
+heap.print()
+print(f'New\n')
 
+heap.delete()
 heap.print()
